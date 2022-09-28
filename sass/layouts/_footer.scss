@@ -1,0 +1,104 @@
+.footer {
+    padding: 60px 0;
+    background: var(--bgd-secondary-color);
+
+    &__container {
+        display: flex;
+        align-items: baseline;
+    }
+
+    // Footer - left-side - logo + address + contacts
+    
+    &__left-side {
+        width: 231px;
+        margin-right: 70px;
+    }
+    &__address {
+        font-style: inherit;
+        line-height: calc(21 / 14);
+        letter-spacing: 0.03em;
+        color: var(--t-light-color);
+    }
+    &-contact__list {
+        @include list;
+    }
+    &-contact__item {
+        margin-top: 9px;
+    }
+    &-contact__link {
+        @include link;
+
+        display: inline-block;
+        line-height: calc(21 / 14);
+        letter-spacing: 0.03em;
+        color: var(--t-gray-color);
+        transition: color var(--trans);
+    }
+    &-contact__link:hover,
+    &-contact__link:focus {
+        color: var(--t-accent-color);
+    }
+
+    // Footer - central-side - social-links
+
+    &__central-side {
+        margin-right: 93px;
+    }
+    &__title-social {
+        margin-bottom: 20px;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: calc(16 / 14);
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: var(--t-light-color);
+    }
+
+    // Footer - right-side - form
+    
+    &__right-side {
+        margin-right: 0;
+    }
+    &-form {
+        display: flex;
+        gap: 12px;
+        align-items: flex-end;
+    }   
+    &-form__name {
+        cursor: pointer;
+    }
+    &-form__title {
+        font-weight: 700;
+        line-height: calc(16 / 14);
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: var(--t-light-color);
+        display: block; 
+        margin-bottom: 10px;
+    }         
+    &-form__input {
+        width: 358px;
+        height: 50px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+        border-radius: 4px; 
+        background-color: transparent;
+        color: var(--i--white-color);
+        outline: none;
+        padding: 15px 16px;
+        cursor: pointer;
+        transition: var(--trans);
+    }
+    &-form__input:focus {
+        border-color: var(--br-accent-color);
+    }
+    &-form__input::placeholder {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: calc(20 / 16);
+        // display: flex;
+        align-items: center;
+        letter-spacing: 0.03em;
+        color: rgba(255, 255, 255, 0.6);
+    } 
+}
