@@ -1,8 +1,8 @@
 .nav {
-    @media screen and (max-width:1199px) {
+    @media screen and (max-width:767px) {
         display: none;
     }
-    @media screen and (min-width:1200px) {
+    @media screen and (min-width:768px) {
         display: flex;
         align-items: center;
         margin-right: auto;
@@ -40,6 +40,12 @@
             line-height: calc(16 / 14);
             letter-spacing: 0.02em;
             transition: color var(--trans);
+            @media screen and (min-width:768px) {
+                padding: 32px 0;
+            }
+            // @media screen and (min-width:1200px) {
+            //     padding: 32px 0;
+            // }
         }
         &__link:hover,
         &__link:focus {

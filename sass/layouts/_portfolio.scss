@@ -1,22 +1,52 @@
 .pf {
-    padding-top: 94px;
+    @include section;
+
+    @media screen and (min-width:1200px) {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
 }
 .filters {
     @include list;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
     gap: 8px;
-    justify-content: center;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
+
+    @media screen and (min-width:768px) {
+        flex-wrap: nowrap;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+    // desktop styles
+    @media screen and (min-width:1200px) {
+        margin-bottom: 50px;
+    }
 }
 .cards {
+    @include list;
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
 
+    // tablet styles
+    @media screen and (min-width:768px) {
+        gap: 26px;
+    }
+
+    // desktop styles
+    @media screen and (min-width:1200px) {
+        gap: 27px;
+    }
+    &__item {
+
+    }
+
     &__link {
         @include link;
         display: inline-block;
-        width: 370px;
+        width: 100%;
         background-color: var(--bgd-white-color);
         border: 1px solid  var(--br-pf-light-gray-color);
         transition: box-shadow var(--trans);
@@ -65,13 +95,14 @@
         border-left: 1px solid var(--br-pf-light-gray-color);
         border-right: 1px solid var(--br-pf-light-gray-color);
         border-bottom: 1px solid var(--br-pf-light-gray-color);
-        padding: 20px 24px;
+        padding: 20px 20px;
     }
     &__title {
         margin-bottom: 4px;
         font-size: 18px;
         line-height: calc(36 / 18);
-        letter-spacing: 0.06em;
+        letter-spacing: 0.05em;
+        width: 306px;
     }
     &__text {
         font-size: 16px;

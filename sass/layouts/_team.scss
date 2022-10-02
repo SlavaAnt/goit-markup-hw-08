@@ -1,7 +1,8 @@
 
 .team {
     @include section;
-    
+    background-color: var(--bgd-cinereous-color);
+
     &__title {
         margin-bottom: 30px;
         font-size: 28px;
@@ -10,7 +11,7 @@
         letter-spacing: 0.03em;
 
         // desktop styles
-        @media screen and (max-width:1199px) {
+        @media screen and (min-width:1200px) {
             margin-bottom: 50px;
             font-size: 36px;
             line-height: calc(42 / 36);
@@ -18,18 +19,14 @@
     }
     &__list {
         @include list;
-        
         display: flex;
         flex-wrap: wrap;
         gap: 30px;
 
         // desktop styles
-        @media screen and (max-width:1199px) {
-            flex-wrap: nowrap;
-        }
-    }
-    & {
-        background-color: var(--bgd-cinereous-color);
+        // @media screen and (min-width:1200px) {
+        //     flex-wrap: wrap;
+        // }
     }
     &__item {
         background: var(--bgd-white-color);
