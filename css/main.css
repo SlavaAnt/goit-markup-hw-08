@@ -839,7 +839,6 @@ p {
   color: var(--t-secondary-color);
   -webkit-transition: color var(--trans);
   transition: color var(--trans);
-  margin-bottom: 10px;
 }
 @media screen and (min-width: 1200px) {
   .contact__link {
@@ -847,8 +846,15 @@ p {
     line-height: 1.1428571429;
   }
 }
-.contact__link:last-child {
-  margin-bottom: 0px;
+@media screen and (min-width: 768px) {
+  .contact__link--tab {
+    margin-bottom: 10px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contact__link--tab {
+    margin-bottom: 0px;
+  }
 }
 .contact__icon {
   fill: currentColor;
@@ -1522,10 +1528,11 @@ p {
   }
 }
 .footer__right-side {
-  width: 574px;
+  width: 100%;
 }
 @media screen and (min-width: 1200px) {
   .footer__right-side {
+    width: 574px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
