@@ -54,9 +54,9 @@
         color: var(--t-primary-color);
         transition: color var(--trans);
 
-        @media screen and (max-width:479px) {
-        display: block;
-        width: 100%;
+        @media screen and (max-width:320px) {
+            font-size: 35px;
+            line-height: calc(42 / 35);
         }
     }
     &__link--active {
@@ -77,9 +77,19 @@
         color: var(--t-accent-color);
         margin-bottom: 32px;
 
-        @media screen and (max-width:479px) {
-        display: block;
-        width: 100%;
+        @media screen and (max-width:320px) {
+            font-size: 24px;
+            line-height: calc(28 / 24);
+        }
+
+        @media screen and (max-width:360px) {
+            font-size: 26px;
+            line-height: calc(30 / 26);
+        }
+
+        @media screen and (max-width:420px) {
+            font-size: 30px;
+            line-height: calc(34 / 30);
         }
     }
     &__tel-link {
@@ -96,9 +106,11 @@
     display: flex;
     flex-wrap: nowrap;
     
-    @media screen and (max-width:479px) {
+    @media screen and (max-width:445px) {
         max-width: 100%;
         flex-wrap: wrap;
+        flex-direction: column;
+
     }
 
     &__item {
@@ -112,8 +124,12 @@
         letter-spacing: 0.02em;
         color: var(--t-accent-color); 
         
-        @media screen and (max-width:479px) {
-        padding-left: 0;
+        @media screen and (max-width:445px) {
+            padding-left: 0;
+            padding: 5px 0;
+            border-right: none;
+            border-bottom: 1px solid rgba(33, 33, 33, 0.2);
+            width: 82px;
         }
     }
     &__item:first-child {
