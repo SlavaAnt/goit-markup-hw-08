@@ -30,27 +30,31 @@
     flex-wrap: wrap;
     gap: 30px;
 
-    // tablet styles
-    @media screen and (min-width:768px) {
-        gap: 26px;
-    }
-
-    // desktop styles
-    @media screen and (min-width:1200px) {
-        gap: 27px;
-    }
     &__item {
-
     }
 
     &__link {
         @include link;
         display: inline-block;
-        width: 100%;
+        width: 450px;
         background-color: var(--bgd-white-color);
         border: 1px solid  var(--br-pf-light-gray-color);
         transition: box-shadow var(--trans);
         cursor: pointer;
+        
+        @media screen and (max-width:479px) {
+            width: 100%;
+        }
+
+        // tablet styles
+        @media screen and (min-width:768px) {
+            width: 354px;
+        }
+
+        // desktop styles
+        @media screen and (min-width:1200px) {
+            width: 370px;
+        }
     }
     &__link:hover,
     &__link:focus {

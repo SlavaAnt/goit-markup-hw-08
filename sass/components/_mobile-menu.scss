@@ -38,6 +38,7 @@
 
 .mobile-nav {
     margin-bottom: auto; 
+
     &__list {
         @include list;
         display: flex;
@@ -52,6 +53,11 @@
         letter-spacing: 0.02em;
         color: var(--t-primary-color);
         transition: color var(--trans);
+
+        @media screen and (max-width:479px) {
+        display: block;
+        width: 100%;
+        }
     }
     &__link--active {
         color: var(--t-accent-color);
@@ -70,6 +76,11 @@
         letter-spacing: 0.02em;
         color: var(--t-accent-color);
         margin-bottom: 32px;
+
+        @media screen and (max-width:479px) {
+        display: block;
+        width: 100%;
+        }
     }
     &__tel-link {
         font-weight: 500;
@@ -85,6 +96,11 @@
     display: flex;
     flex-wrap: nowrap;
     
+    @media screen and (max-width:479px) {
+        max-width: 100%;
+        flex-wrap: wrap;
+    }
+
     &__item {
         display: inline-block;
         padding-left: 10px;
@@ -94,10 +110,15 @@
         font-size: 18px;
         line-height: calc(22 / 18);
         letter-spacing: 0.02em;
-        color: var(--t-accent-color);  
+        color: var(--t-accent-color); 
+        
+        @media screen and (max-width:479px) {
+        padding-left: 0;
+        }
     }
     &__item:first-child {
         padding-left: 0;
+        
     }
     &__item:last-child {
         border-right: none;

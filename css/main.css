@@ -254,6 +254,12 @@ p {
   -webkit-transition: color var(--trans);
   transition: color var(--trans);
 }
+@media screen and (max-width: 479px) {
+  .mobile-nav__link {
+    display: block;
+    width: 100%;
+  }
+}
 .mobile-nav__link--active {
   color: var(--t-accent-color);
 }
@@ -276,6 +282,12 @@ p {
   color: var(--t-accent-color);
   margin-bottom: 32px;
 }
+@media screen and (max-width: 479px) {
+  .mobile-contacts__mail-link {
+    display: block;
+    width: 100%;
+  }
+}
 .mobile-contacts__tel-link {
   font-weight: 500;
   font-size: 24px;
@@ -294,6 +306,13 @@ p {
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
 }
+@media screen and (max-width: 479px) {
+  .mobile-socials {
+    max-width: 100%;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
 .mobile-socials__item {
   display: inline-block;
   padding-left: 10px;
@@ -304,6 +323,11 @@ p {
   line-height: 1.2222222222;
   letter-spacing: 0.02em;
   color: var(--t-accent-color);
+}
+@media screen and (max-width: 479px) {
+  .mobile-socials__item {
+    padding-left: 0;
+  }
 }
 .mobile-socials__item:first-child {
   padding-left: 0;
@@ -1302,21 +1326,11 @@ p {
   /*  Pf-Overlay - start */
   /*  Pf-Overlay - finish */
 }
-@media screen and (min-width: 768px) {
-  .cards {
-    gap: 26px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .cards {
-    gap: 27px;
-  }
-}
 .cards__link {
   text-decoration: none;
   color: currentColor;
   display: inline-block;
-  width: 100%;
+  width: 450px;
   background-color: var(--bgd-white-color);
   border: 1px solid var(--br-pf-light-gray-color);
   -webkit-transition: -webkit-box-shadow var(--trans);
@@ -1324,6 +1338,21 @@ p {
   transition: box-shadow var(--trans);
   transition: box-shadow var(--trans), -webkit-box-shadow var(--trans);
   cursor: pointer;
+}
+@media screen and (max-width: 479px) {
+  .cards__link {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .cards__link {
+    width: 354px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .cards__link {
+    width: 370px;
+  }
 }
 .cards__link:hover, .cards__link:focus {
   -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
