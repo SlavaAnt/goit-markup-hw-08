@@ -55,6 +55,10 @@
         border-radius: 4px;
         transition: border var(--trans);
 
+        // mobil-320 styles
+        @media screen and (max-width:479px) {
+            width: 100%;
+        }
         // tablet styles
         @media screen and (min-width:768px) {
             width: 226px;

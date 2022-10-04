@@ -64,11 +64,15 @@
         display: block;
         font-weight: 700;
         font-size: 20px;
-        line-height: calc(23 / 20);
+        line-height: calc(30 / 20);
         text-align: center;
         letter-spacing: 0.03em;
         color: var(--t-primary-color);
         margin-bottom: 12px;
+
+        @media screen and (width-min:1200px) {
+            line-height: calc(23 / 20);
+        }
     }
     &__group {
         margin-bottom: 20px;
@@ -151,6 +155,7 @@
         align-items: center;
         justify-content: center;
         margin-bottom: 30px;
+        cursor: pointer;
     }
     .icon-checked {
         opacity: 0;
@@ -177,11 +182,16 @@
         border-radius: 1px;
     }
     &__agreement>span {
-        font-size: 14px;
-        line-height: calc(24 / 14);
+        font-size: 12px;
+        line-height: calc(14 / 12);
         letter-spacing: 0.03em;
         color: var(--t-secondary-color);
         user-select: none;
+
+        @media screen and (min-width:1200px) {
+            font-size: 14px;
+            line-height: calc(24 / 14);
+        }
     }
     &__agreement a {
         color: var(--t-accent-color);

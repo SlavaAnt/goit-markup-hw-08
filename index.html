@@ -165,7 +165,11 @@
                      <div class="work__thumb">                  
                         <img
                            class="work__img"
-                           src="./images/job/job1.1.jpg"
+                           srcset="
+                              ./images/job/job-1_d@1x.jpg 1x,
+                              ./images/job/job-1_d@2x.jpg 2x
+                           "
+                           src="./images/job/job-1_d@1x.jpg"
                            alt="programer-is-working-his-desk-office"
                            width="370"
                            height="294"
@@ -181,7 +185,11 @@
                      <div class="work__thumb">  
                         <img
                            class="work__img"
-                           src="./images/job/job2.1.jpg"
+                           srcset="
+                              ./images/job/job-2_d@1x.jpg 1x,
+                              ./images/job/job-2_d@2x.jpg 2x
+                           "
+                           src="./images/job/job-2_d@1x.jpg"
                            alt="creators-is-working-interface-mobile-phones"
                            width="370"
                            height="294"
@@ -197,10 +205,13 @@
                      <div class="work__thumb">  
                         <img
                            class="work__img"
-                           src="./images/job/job3.1.jpg"
+                           srcset="
+                              ./images/job/job-3_d@1x.jpg 1x,
+                              ./images/job/job-3_d@2x.jpg 2x
+                           "
+                           sizes="(min-width:1200px) 370px, 100vw"
+                           src="./images/job/job-3_d@1x.jpg"
                            alt="designer-is-working-with-colours-selection-on-tablet"
-                           width="370"
-                           height="294"
                         />
                         <div class="work__label" >
                            <p class="work__text">
@@ -750,11 +761,11 @@
             </ul>
          </nav>
          <div class="mobile-contacts">
-            <a class="mobile-contacts__mail-link" href="mailto:info@devstudio.com">
-               info@devstudio.com
-            </a>
             <a class="mobile-contacts__tel-link" href="tel:+380961111111">
                +38 096 111 11 11
+            </a>
+            <a class="mobile-contacts__mail-link" href="mailto:info@devstudio.com">
+               info@devstudio.com
             </a>
          </div>
          <ul class="mobile-socials">
